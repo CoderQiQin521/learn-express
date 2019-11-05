@@ -13,13 +13,13 @@ Application.prototype.handle = function(req, res) {
   return router.handle(req, res)
 }
 
-Application.prototype.listen = function(port) {
+Application.prototype.listen = function(port, fn) {
   var self = this
   http
     .createServer(function(req, res) {
       self.handle(req, res)
     })
-    .listen(port)
+    .listen(port, fn)
 }
 
 module.exports = Application

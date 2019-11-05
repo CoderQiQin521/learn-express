@@ -18,7 +18,8 @@ Router.prototype.use = function(path, fn) {
 }
 
 Router.prototype.handle = function(req, res) {
-  var self = this
+  var self = this,
+    method = req.method
   for (var i = 0, len = self.stack.length; i < len; i++) {
     if (self.stack[i].match(req.url)) {
       return self.stack[i].handle_request(req, res)

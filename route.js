@@ -1,4 +1,20 @@
 var Layer = require('./layer')
+// route 是管理一个路径得各种请求方法得数据
+/**
+ *
+ * {
+ * path: '/home',
+ * stack: [
+ * {
+ * path: '/', //继承layer对象得path属性,无实际作用
+ * method: 'get',
+ * fn: function(req, res){
+ *  ...
+ * }
+ * }
+ * ]
+ * }
+ */
 var Route = function(path) {
   this.path = path
   this.stack = []

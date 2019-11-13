@@ -4,8 +4,8 @@ var Application = function () {
   this._router = new Router(); // 实例一个Router统一管理路由
 };
 
-Application.prototype.route = function (path, fn) {
-  return this._router.route(path, fn);
+Application.prototype.route = function (path) {
+  return this._router.route(path);
 };
 
 Application.prototype.get = function (path, fn) {

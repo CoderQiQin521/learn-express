@@ -7,10 +7,6 @@ var Router = function () {
       // 实现默认路由
       res.writeHead(404, { "Content-Type": "text/plain" });
       res.end("404, Cannot " + req.method + " " + req.url);
-    }),
-    new Layer("/", function (req, res) {
-      res.writeHead(200, { "Content-Type": "text/plain" });
-      res.end("hello express");
     })
   ];
 };
